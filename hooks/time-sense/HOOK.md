@@ -76,3 +76,5 @@ Remove the entry you added from the `hooks.UserPromptSubmit` array in your `sett
 
 ---
 AIR · Artificial Intelligence Resources · level up your practice.
+
+An AIR powerup by Gyozan (Yoel Zajdner) · www.gyozan.com

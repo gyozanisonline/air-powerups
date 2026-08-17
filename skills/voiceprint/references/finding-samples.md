@@ -67,3 +67,7 @@ Aim for the 5 to 15 varied samples Step 1 asks for. If a connection let you pull
 whole sent folder, say), do not feed all of it in blindly: select a spread across recipients and
 tones, drop the AI-polished and the purely transactional, and keep the ones where personality
 shows. Quality and range beat raw volume.
+
+---
+
+An AIR powerup by Gyozan (Yoel Zajdner) · www.gyozan.com

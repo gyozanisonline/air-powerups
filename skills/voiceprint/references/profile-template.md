@@ -177,3 +177,7 @@ that needs their explicit say-so. Style evolves with new samples; rules change o
 The two variants share the same skeleton on purpose. A persona profile is a self-voice profile plus
 a rules-and-disclosure crown. Keeping them structurally identical means a drafter never has to learn
 two formats, and a self-voice can grow a persona layer later without a rewrite.
+
+---
+
+An AIR powerup by Gyozan (Yoel Zajdner) · www.gyozan.com

@@ -196,3 +196,8 @@ The file's history is its changelog. Keep it honest to the latest evidence.
   Read during **Build, Step 5**.
 - `assets/example-profile.md` — a complete worked example (a fictional freelance illustrator) so you
   can see what a finished, high-quality profile looks like. Skim it before generating your first one.
+
+---
+
+An AIR powerup by **Gyozan** (Yoel Zajdner) · www.gyozan.com
+Provenance only: never add this line to anything you produce for the user.

@@ -9,35 +9,67 @@ Small upgrades that change how Claude works. Each one is a **relic**: you equip 
 
 Free. Take what you need.
 
+## What's in here
+
+| Relic | What it grants | Kind |
+|---|---|---|
+| [**Voiceprint**](#voiceprint) | Claude learns how you actually write, then drafts in your voice | skill |
+| [**Time Sense**](#time-sense) | Claude always knows the real date and time | hook |
+
+**Getting started:** [Equip them](#equip-them) · [Requirements](#requirements) · [Manual install](#manual-install) · [Uninstall](#uninstall) · [Made by](#made-by) · [License](#license)
+
 ---
 
-## The relics
+## Voiceprint
 
-### Voiceprint · skill
+**skill** · drops into `~/.claude/skills/`
 
-**Claude learns how you actually write, then writes like you.**
+> Claude learns how you actually write, then drafts in your voice.
 
-Most attempts at "write like me" fail the same way: you describe your tone, the model returns a generic average of that description, and it sounds like everyone and no one. Voiceprint works the other direction. It reads writing you have already done, pulls out the concrete patterns (how you open, how you hedge, the punctuation you lean on, the words you would never use), and saves them to a profile file. Every draft after that comes out in your voice.
+Most attempts at "write like me" fail the same way. You describe your tone, the model returns a generic average of that description, and it sounds like everyone and no one.
 
-Two modes: **build** a profile from real samples, **draft** anything in it later.
+Voiceprint works the other direction. It reads writing you have already done and pulls out the concrete patterns that make it yours: how you open, how you hedge, the punctuation you lean on, the emoji that mean something to you, and the words you would never use. Those go into a profile file. Every draft after that is just the profile applied.
 
-Fastest way to feed it is your sent folder. If you have a Gmail connection in Claude, say *"learn my voice from my sent mail."*
+The rule it holds itself to: **every pattern has to trace back to something you actually wrote.** The moment it starts guessing from adjectives, it drifts generic, which is the exact failure it exists to prevent.
 
-[`skills/voiceprint`](skills/voiceprint) · [quickstart guide (PDF)](guides/Voiceprint-Guide.pdf)
+**Two modes**
 
-### Time Sense · hook
+| Mode | When | What happens |
+|---|---|---|
+| **Build** | No profile yet | Collect samples, extract the patterns, write the profile, then test it on a real draft and correct it |
+| **Draft** | Profile exists | Say what you need written, get it in your voice at the right register |
 
-**Claude always knows what time it is.**
+**Feeding it.** The fastest source is your sent folder, since it covers every register from cold client mail to messages to close friends. If you have a Gmail connection in Claude, say *"learn my voice from my sent mail."* Otherwise paste 5 to 15 varied samples: one cold email, one message to a friend, one client reply, one caption, one annoyed-but-polite note. Variety teaches more than volume.
 
-Claude Code learns the date once when a session starts and never sees the clock again, so at noon it will happily tell you to get some rest. This stamps every message you send with the current local time:
+Profiles are saved to `~/.claude/voiceprint-profiles/<name>.md`, outside the skill, so they survive updates and stay private. One file per voice, and it works for a persona or brand voice too, not just your own.
+
+**Inside:** [`skills/voiceprint`](skills/voiceprint) carries the skill plus its extraction methodology, profile template, a guide to where voice hides across channels, and a full worked example. Quickstart: [Voiceprint-Guide.pdf](guides/Voiceprint-Guide.pdf).
+
+---
+
+## Time Sense
+
+**hook** · merges into `settings.json`
+
+> Claude always knows the real date and time.
+
+Claude Code learns the date once when a session starts and never sees the clock again. So halfway through a long session it will happily tell you to get some rest, at noon, and it has no idea whether you stepped away for four minutes or four hours.
+
+This stamps every message you send with the current local time:
 
 ```
 Now: Mon, 2026-08-17, 11:30 GMT+3
 ```
 
-From there Claude gets the part of day right, knows how long you were away, and can reason about deadlines against the real clock. Under ten tokens per message, and it fires only on your prompts, never on tool output.
+One line, injected right before Claude reads your prompt. From there it gets the part of day right, knows how much time passed between your messages, and can reason about deadlines and "by end of day" against the real clock.
 
-[`hooks/time-sense`](hooks/time-sense) · [how it works and how to customize the clock](hooks/time-sense/HOOK.md) · [quickstart guide (PDF)](guides/Time-Sense-Guide.pdf)
+**Why it is cheap.** Under ten tokens per message, and it fires only on your prompts, never on tool output.
+
+**Why it works everywhere.** It is a single inline Node command, and Node ships with Claude Code, so it behaves identically whether Claude Code is running bash, zsh, or PowerShell. Because the command is inline and uses no `require` or `import`, a stray `"type": "module"` in a nearby `package.json` cannot silently kill it, the way it can with file-based script hooks.
+
+**The clock is yours.** The stamp is a normal JavaScript date format, so you can switch to a 12-hour clock, add seconds, drop the time and keep the date, or change the locale. [HOOK.md](hooks/time-sense/HOOK.md) has the table.
+
+**Inside:** [`hooks/time-sense`](hooks/time-sense) carries the exact snippet plus full notes. Quickstart: [Time-Sense-Guide.pdf](guides/Time-Sense-Guide.pdf).
 
 ---
 
@@ -73,7 +105,7 @@ On Windows, copy it into `%USERPROFILE%\.claude\skills\`.
 
 ### Requirements
 
-Claude Code, either the CLI, the desktop app, or an IDE extension. Nothing else to install. The hook runs a single inline Node command, and Node ships with Claude Code, so it behaves the same on macOS, Windows and Linux.
+Claude Code, either the CLI, the desktop app, or an IDE extension. Nothing else to install.
 
 ### Uninstall
 
@@ -83,7 +115,11 @@ Skills: delete the folder from `~/.claude/skills/`. Hooks: remove the entry you 
 
 ## Made by
 
-[Gyozan](https://www.gyozan.com) (Yoel Zajdner), designer and generative artist. AIR is the shelf these live on.
+**Gyozan** (Yoel Zajdner) · [www.gyozan.com](https://www.gyozan.com)
+
+Gyozan is the working name of Yoel Zajdner, a designer and generative artist who builds interactive installations and web work. AIR is the shelf for the Claude Code tools that came out of that practice. Each relic here started as something built to solve an actual problem in real work, and the ones that kept earning their place got packaged and put here.
+
+Every relic carries a one-line credit so you can always trace it back. Nothing more than that, since a skill you install should spend its context on the job, not on its author.
 
 More relics on the way. If one of these saves you an hour, that is the whole point.
 

@@ -93,3 +93,7 @@ honest about its coverage ("strong on warm-professional email, untested on casua
 A small, accurate profile beats a large, invented one. Then use the verify step (a live test draft)
 and the refine flow to grow it as more real writing comes in. The profile improves with evidence,
 never with guesswork.
+
+---
+
+An AIR powerup by Gyozan (Yoel Zajdner) · www.gyozan.com

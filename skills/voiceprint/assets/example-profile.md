@@ -140,3 +140,7 @@ Least → most formal:
 When Maya says "that's not me" or a new sample arrives: find the wrong pattern, fix it against the new
 evidence, add a register row if a new situation showed up, and never remove a pattern without her
 explicit "I don't write like that anymore."
+
+---
+
+An AIR powerup by Gyozan (Yoel Zajdner) · www.gyozan.com
