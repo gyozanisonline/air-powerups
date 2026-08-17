@@ -1,0 +1,20 @@
+{
+  "name": "time-sense",
+  "version": "1.0.0",
+  "description": "Claude always knows the real date and time. A tiny hook stamps every message with the current clock, so it stops guessing 'tonight' at noon.",
+  "author": {
+    "name": "Gyozan (Yoel Zajdner)",
+    "url": "https://www.gyozan.com"
+  },
+  "homepage": "https://www.gyozan.com",
+  "repository": "https://github.com/gyozanisonline/air-powerups",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "hook",
+    "utility"
+  ],
+  "hooks": [
+    "./hooks/hooks.json"
+  ]
+}

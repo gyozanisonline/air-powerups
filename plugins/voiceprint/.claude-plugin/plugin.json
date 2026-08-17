@@ -1,0 +1,21 @@
+{
+  "name": "voiceprint",
+  "version": "1.0.0",
+  "description": "Capture anyone's writing voice from real samples, then draft anything in it. No more generic AI drafts.",
+  "author": {
+    "name": "Gyozan (Yoel Zajdner)",
+    "url": "https://www.gyozan.com"
+  },
+  "homepage": "https://www.gyozan.com",
+  "repository": "https://github.com/gyozanisonline/air-powerups",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "writing",
+    "voice"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

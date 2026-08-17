@@ -1,0 +1,50 @@
+{
+  "name": "air",
+  "owner": {
+    "name": "Gyozan (Yoel Zajdner)",
+    "url": "https://www.gyozan.com"
+  },
+  "metadata": {
+    "description": "AIR \u00b7 Artificial Intelligence Resources. Free Claude Code relics: small upgrades you equip once.",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "voiceprint",
+      "source": "./voiceprint",
+      "description": "Capture anyone's writing voice from real samples, then draft anything in it. No more generic AI drafts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Gyozan (Yoel Zajdner)",
+        "url": "https://www.gyozan.com"
+      },
+      "homepage": "https://www.gyozan.com",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "skill",
+        "writing",
+        "voice"
+      ],
+      "category": "workflow"
+    },
+    {
+      "name": "time-sense",
+      "source": "./time-sense",
+      "description": "Claude always knows the real date and time. A tiny hook stamps every message with the current clock, so it stops guessing 'tonight' at noon.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Gyozan (Yoel Zajdner)",
+        "url": "https://www.gyozan.com"
+      },
+      "homepage": "https://www.gyozan.com",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "hook",
+        "utility"
+      ],
+      "category": "workflow"
+    }
+  ]
+}
