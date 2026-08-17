@@ -43,11 +43,21 @@ From there Claude gets the part of day right, knows how long you were away, and 
 
 ## Equip them
 
-There is no installer. Download this repo, open Claude Code in the folder, and paste one line:
+There is no installer, and nothing to download by hand. Claude does the install.
 
-> Install the AIR powerups in this repo: copy every folder in `skills/` into my `~/.claude/skills/`, and merge every `hooks/*/settings-snippet.json` into the matching hook array in my Claude Code `settings.json`. Keep the hooks I already have, add alongside them. Then tell me what is now available.
+Open Claude Code anywhere and paste this:
 
-Claude finds the right paths, moves the files, and validates the JSON. Start a new session afterward so everything loads.
+> Install the AIR powerups from https://github.com/gyozanisonline/air-powerups : clone it to a temp folder, copy every folder in `skills/` into my `~/.claude/skills/`, then merge every `hooks/*/settings-snippet.json` into the `UserPromptSubmit` array of my Claude Code `settings.json`, keeping the hooks I already have. Confirm what is now available, then delete the temp clone.
+
+That works from any folder, on a machine that has never seen this repo. Claude clones it, finds your real config paths, moves the files, validates the JSON, and cleans up after itself. Start a new session afterward so everything loads.
+
+Want only one of them? Say so: *"...copy only `skills/voiceprint`"*, or *"...only merge `hooks/time-sense`"*.
+
+### If you already cloned it
+
+Open Claude Code inside the folder and paste the same request without the clone step:
+
+> Install the AIR powerups in this repo: copy every folder in `skills/` into my `~/.claude/skills/`, then merge every `hooks/*/settings-snippet.json` into the `UserPromptSubmit` array of my Claude Code `settings.json`, keeping the hooks I already have. Then tell me what is now available.
 
 ### Manual install
 
