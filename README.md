@@ -1,4 +1,7 @@
-<img src="assets/air-wordmark.png" width="180" alt="AIR · Artificial Intelligence Resources">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/air-wordmark-dark.png">
+  <img src="assets/air-wordmark.png" width="150" alt="AIR · Artificial Intelligence Resources">
+</picture>
 
 # Powerups for Claude Code
 
