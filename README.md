@@ -1,7 +1,11 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/air-wordmark-dark.png">
-  <img src="assets/air-wordmark.png" width="150" alt="AIR · Artificial Intelligence Resources">
-</picture>
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/air-wordmark-dark.png">
+    <img src="assets/air-wordmark.png" width="150" alt="AIR · Artificial Intelligence Resources">
+  </picture>
+  <br>
+  By <a href="https://www.gyozan.com"><strong>Gyozan</strong></a>
+</p>
 
 # Powerups for Claude Code
 
