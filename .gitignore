@@ -1,3 +1,6 @@
 .DS_Store
 ._*
 Thumbs.db
+
+# social-card crop proofs are local checks, not shipped art
+assets/*-proof-*.png
