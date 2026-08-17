@@ -115,16 +115,12 @@ Skills: delete the folder from `~/.claude/skills/`. Hooks: remove the entry you 
 
 ## Made by
 
-**Gyozan** (Yoel Zajdner) · [www.gyozan.com](https://www.gyozan.com)
+[**Gyozan**](https://www.gyozan.com) (Yoel Zajdner), Creative technologist, designer, maybe a bit of a scientist. Enjoy!
 
-Gyozan is the working name of Yoel Zajdner, a designer and generative artist who builds interactive installations and web work. AIR is the shelf for the Claude Code tools that came out of that practice. Each relic here started as something built to solve an actual problem in real work, and the ones that kept earning their place got packaged and put here.
-
-Every relic carries a one-line credit so you can always trace it back. Nothing more than that, since a skill you install should spend its context on the job, not on its author.
-
-More relics on the way. If one of these saves you an hour, that is the whole point.
+More relics on the way. If one of these saves you an hour, let me know!
 
 ## License
 
 MIT, see [LICENSE](LICENSE). Use them, change them, build on them.
 
-The AIR name, logo and brand artwork are not part of that license. Those stay mine.
+The AIR name, logo and brand artwork are their own private entity and are not part of this license.
